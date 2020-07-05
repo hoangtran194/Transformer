@@ -92,4 +92,20 @@ class TransformerObject: NSObject , Codable{
         
         return result
     }
+    
+    func updateValue(_ transformer: TransformerObject)
+    {
+        self.id = transformer.id
+        self.name = transformer.name
+        self.strength = transformer.strength
+        self.intelligence = transformer.intelligence
+        self.speed = transformer.speed
+        self.endurance = transformer.endurance
+        self.rank = transformer.rank
+        self.courage = transformer.courage
+        self.firepower = transformer.firepower
+        self.skill = transformer.firepower
+        self.team = transformer.team
+        self.team_icon = transformer.team_icon        
+    }
 }

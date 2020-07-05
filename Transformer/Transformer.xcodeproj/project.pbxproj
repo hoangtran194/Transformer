@@ -23,6 +23,7 @@
 		4F847C8D24AEF1DA00101A39 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F847C8C24AEF1DA00101A39 /* Constants.swift */; };
 		4F847C8F24AEFA7C00101A39 /* KeychainManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F847C8E24AEFA7C00101A39 /* KeychainManager.swift */; };
 		4F847C9124AF04B600101A39 /* TransformerObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F847C9024AF04B600101A39 /* TransformerObject.swift */; };
+		4FE5F2CB24B0F40D0096E17B /* TransformerTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FE5F2CA24B0F40D0096E17B /* TransformerTableCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +64,7 @@
 		4F847C8C24AEF1DA00101A39 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		4F847C8E24AEFA7C00101A39 /* KeychainManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainManager.swift; sourceTree = "<group>"; };
 		4F847C9024AF04B600101A39 /* TransformerObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransformerObject.swift; sourceTree = "<group>"; };
+		4FE5F2CA24B0F40D0096E17B /* TransformerTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransformerTableCell.swift; sourceTree = "<group>"; };
 		7647427DBF42950029885918 /* Pods_Transformer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Transformer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		82230E6967AA0913B6B34FD0 /* Pods_TransformerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TransformerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		90F683B102DCABE84B093A44 /* Pods-TransformerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TransformerTests.debug.xcconfig"; path = "Target Support Files/Pods-TransformerTests/Pods-TransformerTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -176,8 +178,7 @@
 		4F5FE35924B062AA0028615D /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				4F336E2A24AE5FEC007751C6 /* Main.storyboard */,
-				4F336E2F24AE5FEF007751C6 /* LaunchScreen.storyboard */,
+				4FE5F2CA24B0F40D0096E17B /* TransformerTableCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -185,6 +186,8 @@
 		4F5FE35A24B062BD0028615D /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				4F336E2A24AE5FEC007751C6 /* Main.storyboard */,
+				4F336E2F24AE5FEF007751C6 /* LaunchScreen.storyboard */,
 				4F336E2D24AE5FEF007751C6 /* Assets.xcassets */,
 			);
 			path = Resources;
@@ -482,6 +485,7 @@
 				4F336E2924AE5FEC007751C6 /* HomeViewController.swift in Sources */,
 				4F847C8F24AEFA7C00101A39 /* KeychainManager.swift in Sources */,
 				4F336E2524AE5FEC007751C6 /* AppDelegate.swift in Sources */,
+				4FE5F2CB24B0F40D0096E17B /* TransformerTableCell.swift in Sources */,
 				4F847C8D24AEF1DA00101A39 /* Constants.swift in Sources */,
 				4F847C8B24AEF01000101A39 /* RequestManager.swift in Sources */,
 				4F847C9124AF04B600101A39 /* TransformerObject.swift in Sources */,

@@ -52,7 +52,7 @@ func retrieveTransformers(completion : @escaping(Error?,[TransformerObject]?) ->
                 completion(nil,result[transformerKey])
                 
             }catch{
-                
+                print(error)
                 completion( NetworkError.unKnown(response.value ?? ""), nil)
                 
             }
@@ -100,11 +100,12 @@ func updateTransformers(transformer: TransformerObject, completion : @escaping(E
     
     let endPoint        = Constants.crudTransformerAPI
     let header          = headerWithToken()
+    let parameters      = transformer.toDictionary()
     
     AF.request(endPoint,
                method: .put,
-               parameters: nil,
-               encoding: URLEncoding.default,
+               parameters: parameters,
+               encoding: JSONEncoding.default,
                headers: HTTPHeaders(header))
         .responseString { (response) in
             if let error = response.error{
@@ -154,8 +155,8 @@ func createATransformer(transformer: TransformerObject, completion : @escaping(E
                 completion(nil,result)
                 
             }catch{
-                
                 print(response.value!)
+                print(error)
                 completion( NetworkError.unKnown(response.value ?? Constants.emptyValue),nil)
                 
             }
