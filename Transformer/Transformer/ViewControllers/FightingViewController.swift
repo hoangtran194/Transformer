@@ -110,11 +110,11 @@ extension FightingViewController {
         fightingLabelYConstraint.constant = 150
         
         if self.battleStatus == .Win{
-            self.fightingLabel.text = "Win!"
+            self.fightingLabel.text = "Autobot Win!"
             self.play(url: Bundle.main.url(forResource: autobotWinSound, withExtension: mp3Type)!)
             imageView.image = UIImage(named: autobotWinImage)
         }else if self.battleStatus == .Lose{
-            self.fightingLabel.text = "Win!"
+            self.fightingLabel.text = "Deception Win!"
             self.play(url: Bundle.main.url(forResource: deceptionWinSound, withExtension: mp3Type)!)
             imageView.image = UIImage(named: deceptionWinImage)
         }else if self.battleStatus == .Tie{

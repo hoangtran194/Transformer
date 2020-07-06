@@ -12,10 +12,14 @@
         <scene sceneID="Bbq-3o-BZZ">
             <objects>
                 <tabBarController storyboardIdentifier="HomeTabbarController" id="1Q7-9o-8af" sceneMemberID="viewController">
-                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="g5l-eg-UJN">
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics" barStyle="black"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" id="g5l-eg-UJN">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="selectedImageTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="hsj-j8-D5f"/>
@@ -140,7 +144,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Home" id="vqC-So-5vv"/>
+                    <tabBarItem key="tabBarItem" title="Home" selectedImage="tabbar_list_icon" id="vqC-So-5vv"/>
                     <connections>
                         <outlet property="tableView" destination="LnU-hc-MLs" id="C5g-VO-Jum"/>
                     </connections>
@@ -474,7 +478,7 @@
                                     <constraint firstAttribute="height" constant="100" id="HuF-l8-qMr"/>
                                     <constraint firstAttribute="width" constant="320" id="kXM-sw-uTZ"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="56"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -500,4 +504,7 @@
             <point key="canvasLocation" x="863.768115942029" y="-387.05357142857139"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="tabbar_list_icon" width="25" height="25"/>
+    </resources>
 </document>

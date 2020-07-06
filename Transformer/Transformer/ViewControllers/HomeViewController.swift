@@ -30,8 +30,6 @@ class HomeViewController: UIViewController  {
         setupLogic()
         
     }
-    
-    
 }
 
 
@@ -40,9 +38,11 @@ class HomeViewController: UIViewController  {
 ///////////////////////////////////////////////////////////////
 extension HomeViewController {
     @IBAction func fightButtonClicked(_ sender: Any) {
+        
         let status = TransformerObject.battle(firstGroup: self.autoBots!, secondGroup: self.deceptions!)
         let fightingViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "FightingViewController") as! FightingViewController
         fightingViewController.battleStatus = status.0
+        
         self.present(fightingViewController, animated: true, completion: nil)
     }
 }

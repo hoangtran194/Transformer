@@ -23,8 +23,10 @@ protocol AddTransformerViewControllerDelegate:class {
 
 class AddTransformerViewController: UIViewController {
     
+    ///////////////////////////////////////////////////////////////
+    //MARK: - Properties
+    ///////////////////////////////////////////////////////////////
     weak var delegate:AddTransformerViewControllerDelegate?
-    
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var strengthButton: UIButton!
     @IBOutlet weak var intelligenceButton: UIButton!
@@ -40,6 +42,9 @@ class AddTransformerViewController: UIViewController {
     var transfomer : TransformerObject? = TransformerObject()
     var type : Type = .add
         
+    ///////////////////////////////////////////////////////////////
+    //MARK: - Life cycle
+    ///////////////////////////////////////////////////////////////
     override func viewDidLoad() {
     }
     
@@ -56,6 +61,10 @@ class AddTransformerViewController: UIViewController {
     }
 }
 
+
+///////////////////////////////////////////////////////////////
+//MARK: - Actions
+///////////////////////////////////////////////////////////////
 extension AddTransformerViewController {
     
     
@@ -116,6 +125,10 @@ extension AddTransformerViewController {
 }
 
 
+
+///////////////////////////////////////////////////////////////
+//MARK: - Logic
+///////////////////////////////////////////////////////////////
 extension AddTransformerViewController{
     fileprivate func updateTransformer(){
         self.transfomer?.team_icon = nil
@@ -184,6 +197,12 @@ extension AddTransformerViewController{
         })
     }
     
+    
+    /*
+    * Function: Show option for choose team function
+    * @param:
+    * @return:
+    */
     fileprivate func showTeamActionSheet(_ sender : UIButton) {
         let alert = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
         
@@ -206,6 +225,11 @@ extension AddTransformerViewController{
         })
     }
     
+    /*
+    * Function: Reset the page status
+    * @param:
+    * @return:
+    */
     fileprivate func resetValue(){
         self.transfomer = nil
         self.transfomer = TransformerObject()
@@ -213,6 +237,11 @@ extension AddTransformerViewController{
         setupWithTransformer(self.transfomer!)
     }
     
+    /*
+    * Function: validate the current transformer
+    * @param:
+    * @return:
+    */
     fileprivate func validate() -> String{
         
         var message = ""
@@ -263,6 +292,11 @@ extension AddTransformerViewController{
         return message
     }
     
+    /*
+    * Function:Change the page accordingly the transformer
+    * @param:
+    * @return:
+    */
     func setupWithTransformer(_ currentTransformer: TransformerObject){
         self.transfomer = currentTransformer
         
@@ -326,5 +360,4 @@ extension AddTransformerViewController{
         }
         
     }
-
 }

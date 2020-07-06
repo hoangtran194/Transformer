@@ -180,9 +180,14 @@ extension TransformerObject {
             return .SpecialCase
         }
         
-        if self.name! == specialName1 || self.name == specialName2{
+        if ( self.name?.lowercased() == specialName1 || self.name?.lowercased() == specialName2)
+            && ( transformer.name?.lowercased() == specialName1 || transformer.name?.lowercased() == specialName2){
+            return .Tie
+        }
+        
+        if self.name?.lowercased() == specialName1 || self.name?.lowercased() == specialName2{
             return .Win
-        }else if transformer.name == specialName1 || transformer.name == specialName2{
+        }else if transformer.name?.lowercased() == specialName1 || transformer.name?.lowercased() == specialName2{
             return .Lose
         }
         
@@ -245,6 +250,8 @@ extension TransformerObject{
      *  ● Any Transformers who don’t have a fight are skipped (i.e. if it’s a team of 2 vs. a team of 1,
      *  there’s only going to be one battle)
      *  ● The team who eliminated the largest number of the opposing team is the winner
+     *  @param: 2 groups of transformer
+     *  @return:  first parameter the status of battle, second and third are the destroyed bot for first group and second group, respectively.
      */
     static func battle(firstGroup : [TransformerObject], secondGroup : [TransformerObject] ) -> (BattleStatus,Int,Int){
         
