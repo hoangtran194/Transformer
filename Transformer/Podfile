@@ -7,6 +7,7 @@ target 'Transformer' do
 
   pod 'Alamofire', '~> 5.2'
   pod 'KeychainAccess'
+  pod 'SDWebImage'
 
   # Pods for Transformer
 

@@ -123,6 +123,8 @@ extension AddTransformerViewController{
             if error == nil{
                 let alert = UIAlertController(title: "Success", message: "The transformer is update!", preferredStyle: .alert)
                 alert.addAction(UIAlertAction(title: "Got it", style: .cancel, handler: { (alertViewController) in
+                    
+                    self.transfomer?.updateValue(returnedTransformer!)
                     self.delegate?.didUpdate(transformer: self.transfomer!)
                     self.dismiss(animated: true, completion: nil)
                 }))

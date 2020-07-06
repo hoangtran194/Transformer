@@ -1,20 +1,26 @@
 PODS:
   - Alamofire (5.2.1)
   - KeychainAccess (4.2.0)
+  - SDWebImage (5.8.3):
+    - SDWebImage/Core (= 5.8.3)
+  - SDWebImage/Core (5.8.3)
 
 DEPENDENCIES:
   - Alamofire (~> 5.2)
   - KeychainAccess
+  - SDWebImage
 
 SPEC REPOS:
   trunk:
     - Alamofire
     - KeychainAccess
+    - SDWebImage
 
 SPEC CHECKSUMS:
   Alamofire: e911732990610fe89af59ac0077f923d72dc3dfd
   KeychainAccess: 3f760109aa99b05d0f231e28b22642da7153e38a
+  SDWebImage: 112503ec94a5a2a41869503844a15e8d8f1ead5c
 
-PODFILE CHECKSUM: 1cadac84afe82115f3ebb02b514475827613a2c9
+PODFILE CHECKSUM: e0bfbe71c173251ef34caac93e6a1b6b8a9b2d49
 
 COCOAPODS: 1.9.3

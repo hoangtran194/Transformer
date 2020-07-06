@@ -22,6 +22,21 @@ class TransformerTests: XCTestCase {
     func testExample() throws {
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
+        let newTransformer = TransformerObject()
+        newTransformer.name = "Hoang"
+        newTransformer.strength = 10
+        newTransformer.intelligence = 10
+        newTransformer.speed = 5
+        newTransformer.endurance = 6
+        newTransformer.rank = 9
+        newTransformer.courage = 5
+        newTransformer.firepower = 6
+        newTransformer.skill  = 10
+        newTransformer.team = "D"
+        
+        createATransformer(transformer: newTransformer) { (error, addedTransformer) in
+            print("abc")            
+        }
     }
 
     func testPerformanceExample() throws {

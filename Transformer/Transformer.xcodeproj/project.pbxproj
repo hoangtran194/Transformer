@@ -10,6 +10,12 @@
 		01E0FB72E32FCC5EEB55652F /* Pods_Transformer_TransformerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1D1B87C2632DC8D5FF12C61 /* Pods_Transformer_TransformerUITests.framework */; };
 		0520ABB70DDB8A6EB063D6F6 /* Pods_TransformerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82230E6967AA0913B6B34FD0 /* Pods_TransformerTests.framework */; };
 		3E0EA8A5D682D2050CC1C57D /* Pods_Transformer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7647427DBF42950029885918 /* Pods_Transformer.framework */; };
+		4F1A753924B28D8300340F5A /* FightingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F1A753824B28D8300340F5A /* FightingViewController.swift */; };
+		4F1A753B24B29B7900340F5A /* Fighting.gif in Resources */ = {isa = PBXBuildFile; fileRef = 4F1A753A24B29B7900340F5A /* Fighting.gif */; };
+		4F1A753E24B29C0D00340F5A /* AutoBotAttack.gif in Resources */ = {isa = PBXBuildFile; fileRef = 4F1A753C24B29C0C00340F5A /* AutoBotAttack.gif */; };
+		4F1A753F24B29C0D00340F5A /* DeceptionAttack.gif in Resources */ = {isa = PBXBuildFile; fileRef = 4F1A753D24B29C0D00340F5A /* DeceptionAttack.gif */; };
+		4F1A754224B2AA8B00340F5A /* DeceptionWinSound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4F1A754024B2AA8B00340F5A /* DeceptionWinSound.mp3 */; };
+		4F1A754324B2AA8B00340F5A /* AutobotWinSound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4F1A754124B2AA8B00340F5A /* AutobotWinSound.mp3 */; };
 		4F336E2524AE5FEC007751C6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F336E2424AE5FEC007751C6 /* AppDelegate.swift */; };
 		4F336E2724AE5FEC007751C6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F336E2624AE5FEC007751C6 /* SceneDelegate.swift */; };
 		4F336E2924AE5FEC007751C6 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F336E2824AE5FEC007751C6 /* HomeViewController.swift */; };
@@ -45,6 +51,12 @@
 
 /* Begin PBXFileReference section */
 		3CDC6E9AB77B737BDF0A611D /* Pods-Transformer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Transformer.release.xcconfig"; path = "Target Support Files/Pods-Transformer/Pods-Transformer.release.xcconfig"; sourceTree = "<group>"; };
+		4F1A753824B28D8300340F5A /* FightingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FightingViewController.swift; sourceTree = "<group>"; };
+		4F1A753A24B29B7900340F5A /* Fighting.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = Fighting.gif; sourceTree = "<group>"; };
+		4F1A753C24B29C0C00340F5A /* AutoBotAttack.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = AutoBotAttack.gif; sourceTree = "<group>"; };
+		4F1A753D24B29C0D00340F5A /* DeceptionAttack.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = DeceptionAttack.gif; sourceTree = "<group>"; };
+		4F1A754024B2AA8B00340F5A /* DeceptionWinSound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = DeceptionWinSound.mp3; sourceTree = "<group>"; };
+		4F1A754124B2AA8B00340F5A /* AutobotWinSound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = AutobotWinSound.mp3; sourceTree = "<group>"; };
 		4F336E2124AE5FEC007751C6 /* Transformer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Transformer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F336E2424AE5FEC007751C6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4F336E2624AE5FEC007751C6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -186,6 +198,11 @@
 		4F5FE35A24B062BD0028615D /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				4F1A754124B2AA8B00340F5A /* AutobotWinSound.mp3 */,
+				4F1A754024B2AA8B00340F5A /* DeceptionWinSound.mp3 */,
+				4F1A753C24B29C0C00340F5A /* AutoBotAttack.gif */,
+				4F1A753D24B29C0D00340F5A /* DeceptionAttack.gif */,
+				4F1A753A24B29B7900340F5A /* Fighting.gif */,
 				4F336E2A24AE5FEC007751C6 /* Main.storyboard */,
 				4F336E2F24AE5FEF007751C6 /* LaunchScreen.storyboard */,
 				4F336E2D24AE5FEF007751C6 /* Assets.xcassets */,
@@ -205,6 +222,7 @@
 			isa = PBXGroup;
 			children = (
 				4F336E2824AE5FEC007751C6 /* HomeViewController.swift */,
+				4F1A753824B28D8300340F5A /* FightingViewController.swift */,
 				4F5FE36224B0783F0028615D /* AddTransformerViewController.swift */,
 			);
 			path = ViewControllers;
@@ -351,9 +369,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4F1A753F24B29C0D00340F5A /* DeceptionAttack.gif in Resources */,
+				4F1A753B24B29B7900340F5A /* Fighting.gif in Resources */,
+				4F1A754224B2AA8B00340F5A /* DeceptionWinSound.mp3 in Resources */,
 				4F336E3124AE5FEF007751C6 /* LaunchScreen.storyboard in Resources */,
 				4F336E2E24AE5FEF007751C6 /* Assets.xcassets in Resources */,
 				4F336E2C24AE5FEC007751C6 /* Main.storyboard in Resources */,
+				4F1A754324B2AA8B00340F5A /* AutobotWinSound.mp3 in Resources */,
+				4F1A753E24B29C0D00340F5A /* AutoBotAttack.gif in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -483,6 +506,7 @@
 			files = (
 				4F5FE36324B0783F0028615D /* AddTransformerViewController.swift in Sources */,
 				4F336E2924AE5FEC007751C6 /* HomeViewController.swift in Sources */,
+				4F1A753924B28D8300340F5A /* FightingViewController.swift in Sources */,
 				4F847C8F24AEFA7C00101A39 /* KeychainManager.swift in Sources */,
 				4F336E2524AE5FEC007751C6 /* AppDelegate.swift in Sources */,
 				4FE5F2CB24B0F40D0096E17B /* TransformerTableCell.swift in Sources */,

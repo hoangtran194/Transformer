@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SDWebImage
 
 class HomeViewController: UIViewController  {
 
@@ -28,6 +29,21 @@ class HomeViewController: UIViewController  {
         super.viewWillAppear(animated)
         setupLogic()
         
+    }
+    
+    
+}
+
+
+///////////////////////////////////////////////////////////////
+//MARK: - Action
+///////////////////////////////////////////////////////////////
+extension HomeViewController {
+    @IBAction func fightButtonClicked(_ sender: Any) {
+        let status = TransformerObject.battle(firstGroup: self.autoBots!, secondGroup: self.deceptions!)
+        let fightingViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "FightingViewController") as! FightingViewController
+        fightingViewController.battleStatus = status.0
+        self.present(fightingViewController, animated: true, completion: nil)
     }
 }
 
@@ -86,6 +102,9 @@ extension HomeViewController
                 self.deceptions?.append(item)
             }
         }
+                
+        self.autoBots = TransformerObject.sortedByRank(transformers: self.autoBots!)
+        self.deceptions = TransformerObject.sortedByRank(transformers: self.deceptions!)
 
     }
     
@@ -177,7 +196,8 @@ extension HomeViewController : UITableViewDelegate, UITableViewDataSource
         cell.nameLabel.text = transformer.name
         let text = "\(transformer.strength!) \(transformer.intelligence!) \(transformer.rank!)"
         cell.valuesLabel.text = text
-        
+        cell.avatarImage.sd_setImage(with: URL(string: transformer.team_icon!), placeholderImage: nil)
+
         
         return cell
         
