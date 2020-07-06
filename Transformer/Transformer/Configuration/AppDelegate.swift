@@ -36,7 +36,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         } else {
             self.window?.makeKeyAndVisible()
         }
-        UITabBar.appearance().tintColor = UIColor.red        
+//        UITabBar.appearance().tintColor = UIColor.red
+        
+//        let selectedColor   = UIColor(red: 246.0/255.0, green: 155.0/255.0, blue: 13.0/255.0, alpha: 1.0)
+//        let unselectedColor = UIColor(red: 16.0/255.0, green: 224.0/255.0, blue: 223.0/255.0, alpha: 1.0)
+//        
+//        UITabBarItem.appearance().setTitleTextAttributes([NSAttributedString.Key.foregroundColor: unselectedColor], for: .normal)
+//        UITabBarItem.appearance().setTitleTextAttributes([NSAttributedString.Key.foregroundColor: selectedColor], for: .selected)
 
 
         return true
