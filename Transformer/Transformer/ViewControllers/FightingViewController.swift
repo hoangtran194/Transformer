@@ -15,6 +15,7 @@ class FightingViewController: UIViewController {
     ///////////////////////////////////////////////////////////////
     //MARK: - Properties
     ///////////////////////////////////////////////////////////////
+    var isEnableAnimation : Bool = true
     var player : AVAudioPlayer = AVAudioPlayer()
     var battleStatus : BattleStatus = .SpecialCase
     @IBOutlet weak var fightingLabel: UILabel!
@@ -49,7 +50,12 @@ class FightingViewController: UIViewController {
         self.fightingLabel.alpha = 0.0
         self.fightingLabel.text = "Fighting"
         fightingLabelYConstraint.constant = 0
-        showAutoBotImage()
+        
+        if isEnableAnimation == true{
+            showAutoBotImage()
+        }else{
+            showBattleResult()
+        }        
     }
     
     override func viewWillDisappear(_ animated: Bool) {

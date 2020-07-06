@@ -36,6 +36,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         } else {
             self.window?.makeKeyAndVisible()
         }
+        UITabBar.appearance().tintColor = UIColor.red        
+
 
         return true
     }

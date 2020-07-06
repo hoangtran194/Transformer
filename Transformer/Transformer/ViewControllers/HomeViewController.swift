@@ -38,14 +38,18 @@ class HomeViewController: UIViewController  {
 ///////////////////////////////////////////////////////////////
 extension HomeViewController {
     @IBAction func fightButtonClicked(_ sender: Any) {
-        
-        let status = TransformerObject.battle(firstGroup: self.autoBots!, secondGroup: self.deceptions!)
-        let fightingViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "FightingViewController") as! FightingViewController
-        fightingViewController.battleStatus = status.0
-        
-        self.present(fightingViewController, animated: true, completion: nil)
+        let alert = UIAlertController(title: nil, message: "Do you want to use animation on the next view?", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Yes", style: .default, handler: { alert in
+            self.showFightingViewController(true)
+        }))
+        alert.addAction(UIAlertAction(title: "No", style: .cancel, handler: { alert in
+            self.showFightingViewController(false)
+        }))
+        self.present(alert, animated: true)
     }
+
 }
+
 
 ///////////////////////////////////////////////////////////////
 //MARK: - Layout
@@ -81,6 +85,16 @@ extension HomeViewController
         }else{
             getTransformers()
         }
+    }
+    
+    
+    
+    func showFightingViewController(_ showAnimation: Bool){
+        let status = TransformerObject.battle(firstGroup: self.autoBots!, secondGroup: self.deceptions!)
+        let fightingViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "FightingViewController") as! FightingViewController
+        fightingViewController.battleStatus = status.0
+        fightingViewController.isEnableAnimation = showAnimation
+        self.present(fightingViewController, animated: true, completion: nil)
     }
 }
 
@@ -184,6 +198,10 @@ extension HomeViewController : UITableViewDelegate, UITableViewDataSource
         return 2
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
+    
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
@@ -243,6 +261,6 @@ extension HomeViewController : UITableViewDelegate, UITableViewDataSource
 
        }
     }
-
+    
 }
 
